@@ -111,7 +111,7 @@ export default Login;
 
 
 const FormContainer = styled.div`
-   height: 100vh;
+//    height:;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -144,7 +144,7 @@ const FormContainer = styled.div`
     // gap: 0.3rem;
     // background-color: #00000076;
     border-radius: 2rem;
-    padding: 2em;
+    padding: 1em;
   }
   input {
     background-color: transparent;
