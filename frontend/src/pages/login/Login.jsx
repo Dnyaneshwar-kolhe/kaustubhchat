@@ -111,18 +111,18 @@ export default Login;
 
 
 const FormContainer = styled.div`
-//   height: 400px;
-//   width: 100px;
+   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
+//   gap: 1rem;
   align-items: center;
 //   background-color: #131324;
 //   .brand {
 //     display: flex;
 //     align-items: center;
-//     gap: 1rem;
+    // gap: 1rem;
 //     justify-content: center;
 //     img {
 //       height: 1rem;
@@ -141,7 +141,7 @@ const FormContainer = styled.div`
   form {
     display: flex;
     flex-direction: column;
-    gap: 0.9rem;
+    // gap: 0.3rem;
     // background-color: #00000076;
     border-radius: 2rem;
     padding: 2em;
