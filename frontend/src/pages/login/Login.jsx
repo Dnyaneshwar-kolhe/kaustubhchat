@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useLogin from "../../hooks/useLogin";
+import styled from "styled-components";
 
 const Login = () => {
 	const [username, setUsername] = useState("");
@@ -14,13 +15,14 @@ const Login = () => {
 	};
 
 	return (
+		<FormContainer>
 		<div className='flex flex-col items-center justify-center min-w-96 mx-auto'>
 			<div className='w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
 				<h1 className='text-3xl font-semibold text-center text-gray-300'>
 					Login
 					<span className='text-purple-500'> ChatApp</span>
 				</h1>
-
+               
 				<form onSubmit={handleSubmit}>
 					<div>
 						<label className='label p-2'>
@@ -35,7 +37,7 @@ const Login = () => {
 						/>
 					</div>
 
-					<div>
+					<div >
 						<label className='label'>
 							<span className='text-base label-text'>Password</span>
 						</label>
@@ -59,6 +61,7 @@ const Login = () => {
 				</form>
 			</div>
 		</div>
+		</FormContainer>
 	);
 };
 export default Login;
@@ -104,3 +107,82 @@ export default Login;
 // 	);
 // };
 // export default Login;
+
+
+
+const FormContainer = styled.div`
+//   height: 100vh;
+//   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+//   background-color: #131324;
+//   .brand {
+//     display: flex;
+//     align-items: center;
+//     gap: 1rem;
+//     justify-content: center;
+//     img {
+//       height: 1rem;
+//     }
+    h1 {
+      color: white;
+      text-transform: uppercase;
+    }
+//   }
+       
+    
+        // border-radius: 1rem;
+        // box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+        // align-items: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    // background-color: #00000076;
+    border-radius: 2rem;
+    padding: 2em;
+  }
+  input {
+    background-color: transparent;
+    padding: 1rem;
+    border: 0.1rem solid #4e0eff;
+    border-radius: 0.4rem;
+    color: white;
+    width: 100%;
+    font-size: 1rem;
+    &:focus {
+      border: 0.1rem solid #997af0;
+      outline: none;
+    }
+  }
+  button {
+    background-color: #4e0eff;
+    color: white;
+    padding: 0 1rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    &:hover {
+      background-color: #4e0eff;
+	  transform: scale(1.10);
+    }
+  }
+  span {
+    // color: white;
+    text-transform: uppercase;
+    //   color: #4e0eff;
+      text-decoration: none;
+      font-weight: bold;
+  }
+`;
